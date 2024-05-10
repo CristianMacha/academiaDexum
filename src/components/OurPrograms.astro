@@ -1,0 +1,34 @@
+---
+import Program from "./Program.astro";
+import programOneImage from "../../public/images/teachers.webp";
+---
+
+<section
+    class="px-4 flex flex-col gap-10 py-24 items-center md:px-[64px] md:py-52 lg:px-[194px] lg:gap-20 lg:items-start"
+>
+    <div class="flex flex-col gap-4">
+        <h2 class="text-base font-medium text-primary">Nuestros programas</h2>
+        <h3 class="text-4xl font-bold text-gray-800">
+            Preparando para el Éxito Academico
+        </h3>
+        <p class="text-xl font-normal text-gray-700">
+            Desde los primeros años escolares hasta la etapa colegial, ofrecemos
+            un enfoque educativo completo y personalizado. ¡Prepárate para un
+            futuro brillante con nosotros!
+        </p>
+    </div>
+    <div class="flex flex-col gap-4 md:flex-row">
+        <Program
+            imageUrl={programOneImage}
+            tagName="tag name"
+            title="Programa one"
+            description="lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum"
+        />
+        <Program
+            imageUrl={programOneImage}
+            tagName="tag name"
+            title="Programa one"
+            description="lorem ipsum lorem ipsum lorem ipsumlorem ipsum lorem ipsum lorem ipsum"
+        />
+    </div>
+</section>

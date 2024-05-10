@@ -1,0 +1,30 @@
+---
+import { Image } from "astro:assets";
+import teachersImages from "../../public/images/teachers.webp";
+---
+
+<section
+    class="px-4 flex flex-col gap-10 py-24 items-center md:px-[64px] md:gap-4 md:py-52 lg:px-[194px] lg:flex-row lg:gap-20 bg-[#232323]"
+>
+    <div class="flex flex-col gap-4">
+        <h2 class="text-base font-medium text-primary">Porque nosotros</h2>
+        <h3 class="text-4xl font-bold text-gray-100">
+            Descubre Nuestra Esencia Educativa
+        </h3>
+        <p class="text-xl font-normal text-gray-300">
+            En Academia Dexum, nos esforzamos por ofrecer una experiencia
+            educativa única y transformadora. Desde el compromiso con la
+            excelencia académica hasta el enfoque en el desarrollo integral de
+            nuestros estudiantes, cada aspecto de nuestra academia refleja
+            nuestra pasión por el aprendizaje y el crecimiento. Conoce cómo
+            nuestra dedicación, innovación y enfoque centrado en el estudiante
+            hacen de nosotros la mejor opción para el futuro de tus hijos.
+            ¡Bienvenido a nuestra comunidad educativa!
+        </p>
+    </div>
+    <Image
+        src={teachersImages}
+        alt="Profesores de la academia dexum"
+        class="w-full h-[253px] rounded-lg md:h-[445px]"
+    />
+</section>

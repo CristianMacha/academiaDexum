@@ -1,0 +1,41 @@
+---
+import PersonCard from "./PersonCard.astro";
+
+import PersonNameOne from "../../public/images/teachers.webp";
+---
+
+<section
+    class="px-4 flex flex-col gap-10 py-24 items-start md:px-[64px] md:py-52 lg:px-[194px] lg:gap-20 bg-gray-50"
+>
+    <div class="flex flex-col gap-4">
+        <h2 class="text-base font-medium text-primary">
+            Nuestro equipo educativo
+        </h2>
+        <h3 class="text-4xl font-bold text-gray-800">
+            Preparate con los Mejores
+        </h3>
+        <p class="text-xl font-normal text-gray-700">
+            nuestro equipo educativo está formado por profesionales
+            comprometidos con la excelencia académica y el bienestar de los
+            estudiantes.
+        </p>
+    </div>
+    <div class="w-full h-full">
+        <div class="overflow-x-auto">
+            <div class="flex flex-row gap-4">
+                <PersonCard
+                    imageUrl={PersonNameOne}
+                    name="Angela Solis"
+                    tag="angela@email.com"
+                    description="Juntos, inspiramos el aprendizaje y cultivamos el potencial de cada estudiante."
+                />
+                <PersonCard
+                    imageUrl={PersonNameOne}
+                    name="Angela Solis"
+                    tag="angela@email.com"
+                    description="Juntos, inspiramos el aprendizaje y cultivamos el potencial de cada estudiante."
+                />
+            </div>
+        </div>
+    </div>
+</section>

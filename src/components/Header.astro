@@ -1,0 +1,121 @@
+<header
+    class="fixed bg-white px-4 flex py-5 items-center md:px-[64px] lg:px-[194px] w-full justify-between shadow-sm"
+>
+    <div>
+        <div class="text-xl font-bold text-gray-700">
+            ACADEMIA <span class="text-primary">DEXUM</span>
+        </div>
+    </div>
+    <nav class="hidden lg:block">
+        <ul
+            class="flex flex-col whitespace-nowrap gap-2 text-base font-medium text-gray-700 md:flex-row md:gap-4"
+        >
+            <li>
+                <a href="">Acerca de nosotros</a>
+            </li>
+            <li>
+                <a href="">Programas</a>
+            </li>
+            <li>
+                <a href="">Nuestro equipo</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="block lg:hidden">
+        <button class="p-2 rounded-md bg-gray-50" id="btnMenuOpen">
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="2"
+                stroke="currentColor"
+                class="w-6 h-6"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+            </svg>
+        </button>
+    </div>
+</header>
+<div class="menu-mobile" id="menuContent">
+    <div class="w-full h-full flex flex-col justify-between">
+        <div class="flex justify-between items-center px-4 py-5">
+            <div class="text-xl font-bold text-gray-700">
+                ACADEMIA <span class="text-primary">DEXUM</span>
+            </div>
+            <div>
+                <button class="p-2 rounded-md bg-gray-50" id="btnMenuClose">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="2"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                    >
+                        <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6 18 18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="px-4">
+            <nav>
+                <ul
+                    class="flex flex-col whitespace-nowrap gap-2 text-2xl font-medium text-gray-700 md:flex-row md:gap-4"
+                >
+                    <li>
+                        <a href="">Acerca de nosotros</a>
+                    </li>
+                    <li>
+                        <a href="">Programas</a>
+                    </li>
+                    <li>
+                        <a href="">Nuestro equipo</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="px-4 py-5">
+            <button class="w-full rounded-md bg-primary px-6 py-3 text-white font-medium"
+                >Contactar</button
+            >
+        </div>
+    </div>
+</div>
+
+<style>
+    .menu-mobile {
+        position: fixed;
+        overflow: hidden;
+        width: 0;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+        background-color: #fff;
+        display: flex;
+    }
+
+    .menu-mobile.show {
+        width: 100%;
+    }
+</style>
+<script>
+    const btnMenuOpen = document.getElementById("btnMenuOpen");
+    const btnMenuClose = document.getElementById("btnMenuClose");
+    const menuContent = document.getElementById("menuContent");
+
+    btnMenuOpen?.addEventListener("click", () => {
+        menuContent?.classList.add("show");
+        document.body.style.overflow = "hidden";
+    });
+
+    btnMenuClose?.addEventListener("click", () => {
+        menuContent?.classList.remove("show");
+        document.body.style.overflow = "";
+    });
+</script>
